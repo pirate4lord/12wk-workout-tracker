@@ -698,41 +698,38 @@
         .user-info {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 16px;
+            justify-content: center;
+            gap: 12px;
+            padding: 12px 20px;
             background: #f8f9fa;
-            border-radius: 6px;
-            font-size: 0.9em;
+            border-radius: 8px;
+            font-size: 0.95em;
             color: #555;
-            margin-left: auto;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .user-info img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            border: 2px solid #3498db;
         }
 
         .signout-btn {
             background: #e74c3c;
             color: white;
             border: none;
-            padding: 6px 12px;
+            padding: 8px 16px;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 0.85em;
+            font-size: 0.9em;
             transition: background 0.2s;
+            margin-left: 10px;
         }
 
         .signout-btn:hover {
             background: #c0392b;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
         }
 
         .sync-status {
@@ -850,13 +847,14 @@
 
     <!-- Main App (Hidden until authenticated) -->
     <div id="appContainer" style="display: none;">
-        <div class="header-container">
-            <h1>
-                <span>12-Week Strength Building Workout Tracker</span>
-                <button class="settings-button" onclick="openSettings()" title="Settings">⚙</button>
-            </h1>
-            <div id="userInfo" class="user-info"></div>
-        </div>
+        <!-- User Info - Centered at Top -->
+        <div id="userInfo" class="user-info"></div>
+
+        <!-- Main Title with Settings -->
+        <h1>
+            <span>12-Week Strength Building Workout Tracker</span>
+            <button class="settings-button" onclick="openSettings()" title="Settings">⚙</button>
+        </h1>
         <p><strong>Schedule:</strong> Monday, Wednesday, Friday (with 48 hours between sessions)</p>
         <p><strong>Duration:</strong> 30 minutes per session<span id="syncStatus" class="sync-status">Synced</span></p>
 
